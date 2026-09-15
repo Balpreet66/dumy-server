@@ -186,7 +186,7 @@ def get_user_data(user_id: int):
 # AI ANALYZE ENDPOINT
 # ============================================================
 
-@app.post("/api/v1/ai/analyze")
+@app.post("/ai/analyze")
 def analyze_transactions(request: AIRequest):
 
     # --------------------------------------------------------
