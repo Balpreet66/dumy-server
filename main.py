@@ -186,7 +186,7 @@ def get_user_data(user_id: int):
 # AI ANALYZE ENDPOINT
 # ============================================================
 
-@app.post("/ai/analyze")
+@app.post("/api/v1/ai/analyze")
 def analyze_transactions(request: AIRequest):
 
     # --------------------------------------------------------
@@ -248,7 +248,7 @@ Do not invent or assume financial information that is not present in the data.
     try:
 
         response = gemini_client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.5-flash-lite",
             contents=input_prompt
         )
 
